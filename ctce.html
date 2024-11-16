@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borang Permohonan Pindahan Kredit</title>
+    <style>
+      body {
+          font-family: Arial, sans-serif;
+          margin: 40px;
+          font-size: small;
+          tab-size: a4 lanscape;
+        }
+        
+        header {
+          tex-align: center;
+          margin-bottom: 50px;
+        }
+        
+        header img {
+          max-width: 100%; /* changed from 500% to 100% */
+          height: auto;
+          margin-bottom: 10px;
+          align-items: center;
+        }
+        
+        h3 {
+          font-size: 30px;
+          font-weight: bold;
+          margin-bottom: 1px;
+          padding: 5px;
+          border: 1px solid #1d1111;
+          border-radius: 5px;
+          background-color: purple;
+          text-align: center;
+        }
+        
+        .center-container {
+          text-align: center;
+          font-size: larger;
+        }
+        
+        .center-container input[type="text"] {
+          display: block;
+          margin: 10px;
+          width: 100%; /* changed from auto to 100% */
+        }
+        
+        .container {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+        }
+        
+        .row {
+          display: flex;
+          flex-direction: row;
+          width: 70%;
+          border-bottom: 1px solid #ccc;
+        }
+        
+        .th {
+          background-color: purple;
+          border: 1px solid #1d1111;
+          text-align: center;
+          color: white;
+        }
+        
+        .cell {
+          margin-right: 18px;
+        }
+        
+        label {
+          margin-right: 10px;
+        }
+        
+        .sub-header {
+          font-weight: bold;
+          background-color: #f0f0f0;
+        }
+        
+        input[type="text"] {
+          width: auto%; /* changed from auto% to 100% */
+          padding: 10px;
+          border: 1px solid transparent;
+          border-radius: 5px;
+        }
+        
+        .content .session .gender {
+            margin-left: 20px;
+            border: 1px solid #000;
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .content .session .gender div {
+            margin: 5px 0;
+            border-bottom: 1px solid #000;
+            width: 100%;
+            text-align: center;
+        }
+        .content .session .gender div:last-child {
+            border-bottom: none;
+        }
+        .content .session .gender {
+            margin-left: auto;
+        }
+        .small-column {
+    width: 50px; /* Set the desired width for the Jam Kredit column */
+}
+        
+        @media print {
+          .print-button, .print-symbol, .hide-on-print {
+            display: none;
+          }
+        }
+      </style> 
+    <script>
+       function printWindow() {
+  // Create a new window to handle the printing process
+  const printWindow = window.open("", "_blank");
+
+  // Get the entire HTML content of the current page
+  const pageContent = document.documentElement.outerHTML;
+
+  // Set the content of the new window to the page content
+  printWindow.document.open();
+  printWindow.document.write(pageContent);
+  printWindow.document.close();
+
+  // Trigger the print dialog in the new window
+  printWindow.print();
+}
+    </script>
+</head>
+<body>
+   <center>
+    <header>
+        <img src="logo.png" alt="Logo" style="max-width: 70%; height: auto;"><h8>Versi 2025</h8>
+        
+        <h3>BORANG PERMOHONAN PEMINDAHAN KREDIT/ PENGECUALIAN KURSUS</h3>
+    </header>
+        <p>SESI PENGAJIAN: </p> 
+        <p>JENIS KREDIT: DENGAN GRED / TANPA GRED</p>
+    </center>
+    <section>
+
+        <div class="table">
+            <div class="row">
+                <div class="cell">Nama Pelajar :</div>
+                <div class="cell"><input type="text" placeholder="_________________"></div>
+            </div>
+            <div class="row">
+                <div class="cell">No. Kad Pengenalan :</div>
+                <div class="cell"><input type="text" placeholder="____ - ____ - ____ - ____"></div>
+            </div>
+            <!-- Continue adding rows as needed -->
+        </div>
+
+        <div class="table">
+            <div class="row">
+              <div class="cell">No. Pendaftaran :</div>
+              <div class="cell"><input type="text" placeholder="____________"></div>
+              <div class="cell">Program:</div>
+              <div class="cell"><input type="text" placeholder="___"></div>
+              <div class="cell">Semester:</div>
+              <div class="cell"><input type="text" placeholder="__"></div>
+              <div class="cell">Seksyen:</div>
+              <div class="cell"><input type="text" placeholder=""></div>
+            </div>
+            <div class="row">
+              <div class="cell">No. Telefon :</div>
+              <div class="cell"><input type="text" placeholder="___-_________"></div>
+          </div>
+          <div class="row">
+            <div class="cell">Alamat surat menyurat :</div>
+            <div class="cell"><input type="text" id="mailingAddress" <td><input type="text" placeholder="________________________________________"><br><input type="text" placeholder="________________________________________">
+            </div>
+            <div class="table">
+              <div class="row">
+                  <div class="cell">Institusi Terdahulu :</div>
+                  <div class="cell"><input type="text" placeholder="____________"></div>
+                  <div class="cell">Program Terdahulu :</div>
+                  <div class="cell"><input type="text" placeholder="____________"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+     <div>
+      <input type="checkbox" id="lelaki" name="gender" value="lelaki">
+         <label for="lelaki">LELAKI</label>
+      <input type="checkbox" id="perempuan" name="gender" value="perempuan">
+      <label for="perempuan">PEREMPUAN</label>
+     </div>
+    </div>
+         <table border="1" cellpadding="5" cellspacing="0">
+          <tr>
+            <td>JKA</td>
+            <td>JKE</td>
+            <td>JKM</td>
+            <td>JP</td>
+            <td>JPH</td>
+          </tr>
+          <tr>
+            <td colspan=""></td>
+            <td colspan=""></td>
+            <td colspan=""></td>
+            <td colspan=""></td>
+            <td colspan=""></td>
+          </tr>
+        </table>
+        <table border="1" cellpadding="5" cellspacing="0">
+          <tr>
+            <td colspan="5">SEMESTER</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+          </tr>
+        </table>
+      
+          <!-- Continue adding rows as needed for "Jabatan", "Semester", etc. -->
+      
+    </section>
+
+
+        <p>Sila baca Garis Panduan Pemindahan Kredit dan Pengecualian Kredit (CTCE) sebelum mengisi borang ini. Sila isikan ruang dibawah ini dengan terang dan betul. Pastikan anda menulis kod dan nama kursus yang berkenaan setelah berbincang dengan PA.</p>
+        
+        <table border="1">
+            <tr style="background-color:rgb(184, 138, 226);">
+                <th colspan="1">Bil</th>
+                <th colspan="3">Kursus Politeknik Yang Dipohon CT / CE #</th>
+
+                <th colspan="4">Modul / SPM / Politeknik / IPT Terdahulu Yang Setara</th>
+                <th colspan="3">Keputusan Permohonan</th>
+            </tr>
+            <tr style="background-color: rgb(206, 167, 214);">
+                <td></td>
+                <td>Kod Kursus</td>
+                <td>Nama Kursus</td>
+                <td class="small-column">Jam Kredit</td>
+                <td>Kod Kursus</td>
+                <td>Nama Kursus</td>
+                <td class="small-column">Jam Kredit</td>
+                <td class="small-column">Gred</td>
+                <td>% Kesetaraan</td>
+                <td>Disokong / Tidak Disokong</td>
+                <td>Tandatangan & Cop Ketua Jabatan</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder="" class="small-column"></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder="" class="small-column"></td>
+                <td><input type="text" placeholder="" class="small-column"></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder="" class="small-column"></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder="" class="small-column"></td>
+              <td><input type="text" placeholder="" class="small-column"></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+              <td><input type="text" placeholder=""></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder="" class="small-column"></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder="" class="small-column"></td>
+            <td><input type="text" placeholder="" class="small-column"></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+            <td><input type="text" placeholder=""></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder="" class="small-column"></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder="" class="small-column"></td>
+          <td><input type="text" placeholder="" class="small-column"></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+          <td><input type="text" placeholder=""></td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder="" class="small-column"></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder="" class="small-column"></td>
+        <td><input type="text" placeholder="" class="small-column"></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+        <td><input type="text" placeholder=""></td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td><input type="text" placeholder=""></td>
+      <td><input type="text" placeholder=""></td>
+      <td><input type="text" placeholder="" class="small-column"></td>
+      <td><input type="text" placeholder=""></td>
+      <td><input type="text" placeholder=""></td>
+      <td><input type="text" placeholder="" class="small-column"></td>
+      <td><input type="text" placeholder="" class="small-column"></td>
+      <td><input type="text" placeholder=""></td>
+      <td><input type="text" placeholder=""></td>
+      <td><input type="text" placeholder=""></td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td><input type="text" placeholder=""></td>
+    <td><input type="text" placeholder="" ></td>
+    <td><input type="text" placeholder="" class="small-column"></td>
+    <td><input type="text" placeholder=""></td>
+    <td><input type="text" placeholder=""></td>
+    <td><input type="text" placeholder="" class="small-column"></td>
+    <td><input type="text" placeholder="" class="small-column"></td>
+    <td><input type="text" placeholder=""></td>
+    <td><input type="text" placeholder=""></td>
+    <td><input type="text" placeholder=""></td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><input type="text" placeholder=""></td>
+  <td><input type="text" placeholder=""></td>
+  <td><input type="text" placeholder="" class="small-column"></td>
+  <td><input type="text" placeholder=""></td>
+  <td><input type="text" placeholder=""></td>
+  <td><input type="text" placeholder="" class="small-column"></td>
+  <td><input type="text" placeholder="" class="small-column"></td>
+  <td><input type="text" placeholder=""></td>
+  <td><input type="text" placeholder=""></td>
+  <td><input type="text" placeholder=""></td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><input type="text" placeholder=""></td>
+  <td><input type="text" placeholder=""></td>
+  <td><input type="text" placeholder="" class="small-column"></td>
+  <td><input type="text" placeholder=""></td>
+  <td><input type="text" placeholder=""></td>
+  <td><input type="text" placeholder="" class="small-column"></td>
+  <td><input type="text" placeholder="" class="small-column"></td>
+  <td><input type="text" placeholder=""></td>
+  <td><input type="text" placeholder=""></td>
+  <td><input type="text" placeholder=""></td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><input type="text" placeholder=""></td>
+  <td><input type="text" placeholder=""></td>
+  <td><input type="text" placeholder="" class="small-column"></td>
+  <td><input type="text" placeholder=""></td>
+  <td><input type="text" placeholder=""></td>
+  <td><input type="text" placeholder="" class="small-column"></td>
+  <td><input type="text" placeholder="" class="small-column"></td>
+  <td><input type="text" placeholder=""></td>
+  <td><input type="text" placeholder=""></td>
+  <td><input type="text" placeholder=""></td>
+</tr>
+            <tr>
+            <td colspan="3">Saya mengaku bahawa keterangan yang diberi dalam borang ini adalah betul dan benar.</td>
+            <td colspan="3">Telah dibawa bincang dengan PA.</td>
+            <td colspan="5">Keputusan dibuat oleh Jawatankuasa Pemindahan Kredit dan Pengecualian Kursus Politeknik Merlimau <strong>DILULUSKAN/ TIDAK DILULUSKAN</strong></td>
+            </tr>
+            <tr>
+            <td colspan="3">Tandatangan Pelajar:</td>
+            <td colspan="3">Tandatangan & Cap PA:</td>
+            <td colspan="5">Tandatangan Pengerusi dan Cap Rasmi:</td>
+            </tr>
+            <tr>
+                <td colspan="3">Tarikh:</td>
+                <td colspan="3">Tarikh:</td>
+                <td colspan="5">Tarikh:</td>
+            </tr>
+
+
+            <!-- Add more rows as needed -->
+        </table>
+        <p>*Tandakan (✓) bagi yang berkenaan sahaja. <small>#</small>Potong yang <strong>TIDAK</strong> berkenaan</p>
+        <button onclick="printForm()" style="margin-bottom: 20px;">Print</button>
+
+</body>
+</html>
+
