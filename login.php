@@ -1,7 +1,7 @@
 <?php
 require 'connect.php';
-$username = $_POST["username"];
-$password = $_POST["password"];
+$username = $_GET["username"];
+$password = $_GET["password"];
 
 $query_sql = "SELECT * FROM tbl_users
 WHERE username = '$username' AND password = '$password' ";
